@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flow of water</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		body {
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			font-family: 'Yusei Magic', sans-serif;
+			letter-spacing: 2px;
+		}
+		main {
+			width: 100vw;
+			height: 65vh;
+			overflow: hidden;
+			/*display: flex;
+			justify-content: center;
+			align-items: center;*/
+		}
+		section {
+    		width: 25%;
+			margin: auto;
+			margin-top: 19rem;
+			
+		}
+		button {
+		    padding: 0.4rem 1rem;
+		    background: #0099ff;
+		    color: white;
+		    border: none;
+		    border-radius: 5px;
+		    font-weight: bold;
+		    cursor: pointer;
+		}
+		button#off {
+		    background-color: red;
+		}
+		.submit-btn{
+			animation-name: submit-btn-animation;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes submit-btn-animation {
+			0% {
+				transform: scale(0.9);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		article#water-flow {
+			visibility: hidden;
+		    margin-top: 2rem;
+		}
+		.artical-show {
+			visibility: visible !important;
+		}
+		.s-switch {
+			width: 60%;
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+		}
+		input {
+		    width: 4rem;
+		    margin-left: 2rem;
+		    padding: 5px;
+		}
+		svg {
+			width: 100%
+		}
+		.submit-btn{
+		    margin-left: 6rem;
+    		margin-top: 2rem;
+		}
+		p {
+			font-size: 20px;
+		    margin-top: 1rem;
+		}
+		span#output {
+		    color: red;
+		    font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section>
+			<h1>Motor Switch</h1>
+			<div class="btn-div">
+				<button id="on" value="on">ON</button>
+				<button id="off" value="off">OFF</button>
+			</div>
+			<article id="water-flow">
+				<form id="frm">
+					<!-- single switch -->
+					<div class="s-switch">
+						<label for="mainS">Main suppple Switch</label>
+						<input type="text" id="mainS" placeholder="on / off">
+					</div>
+
+					<!-- single switch -->
+					<div class="s-switch">
+						<label for="reserveTankSwitch">Reserve Tank Switch</label>
+						<input type="text" id="reserveS" placeholder="on / off">	
+					</div>
+
+					<!-- single switch -->
+					<div class="s-switch">
+						<label for="garageS">Garage Switch</label>
+						<input type="text"id="garageS" placeholder="on / off">
+					</div>
+
+					<button class="submit-btn">Pass all inputs</button>
+				</form>
+
+				<p>
+					<span>Water Flow: </span> <span id="output"></span>
+				</p>
+
+			</article>
+		</section>
+	</main>
+	<svg  viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L34.3,218.7C68.6,181,137,107,206,117.3C274.3,128,343,224,411,240C480,256,549,192,617,160C685.7,128,754,128,823,154.7C891.4,181,960,235,1029,229.3C1097.1,224,1166,160,1234,133.3C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+</body>
+
+
+<script type="text/javascript" src="flow of water.js"></script>
+
+</html>
